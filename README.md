@@ -41,3 +41,22 @@
   ![继承关系](./assets/uml/inherit.png "inherit")
 - 实现关系: 是接口与实现类之间的关系, 类实现了接口, 类中的操作实现了接口中所声明的所有抽象操作  
   ![实现关系](./assets/uml/accomplish.png "accomplish")
+
+#### 软件设计原则
+
+> 开闭原则 `Open Close Principle`
+
+- 对扩展开放, 对修改关闭
+- 在程序需要进行扩展时, 不能去修改原有的代码, 实现热插拔效果.
+- 使用接口和抽象类
+
+> 里氏代换原则 `Liskov Substitution Principle`
+
+
+> 依赖倒转原则 `Dependence Inversion Principle`
+
+> 接口隔离原则 `Interface Segregation Principle`
+
+> 迪米特法则
+
+> 合成复用原则
