@@ -46,7 +46,8 @@ impl Player {
 }
 // endregion
 
-pub fn open_close_example() {
+#[test]
+fn open_close_example() {
     let default_skin = DefaultSkin {};
     let skin1 = MySkin1 {};
 
