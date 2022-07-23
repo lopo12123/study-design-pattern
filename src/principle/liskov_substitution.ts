@@ -47,20 +47,27 @@ class Square extends Rectangle {
     }
 }
 
-(() => {
-    let rect = new Rectangle(6, 8);
+const resize = (shape: Rectangle) => {
+    shape.print()
 
-    const resize = (rect: Rectangle) => {
-        rect.print()
-        // width: 6, height: 8
-
-        while (rect.width < rect.height) {
-            rect.setWidth(rect.width + 1)
-        }
-
-        rect.print()
-        // width: 8, height: 8
+    while (shape.width <= shape.height) {
+        shape.setWidth(shape.width + 1)
     }
 
+    shape.print()
+}
+
+// test
+(() => {
+
+    let rect = new Rectangle(6, 8);
+    let square = new Square(6)
+
+    // 正确
     resize(rect)
+    // width: 6, height: 8
+    // width: 8, height: 8
+
+    // 死循环
+    resize(square)
 })()
