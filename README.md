@@ -52,6 +52,9 @@
 
 > 里氏代换原则 `Liskov Substitution Principle`
 
+- 任何基类可以出现的地方, 子类一定可以出现.
+    - 通俗理解: 子类可以扩展父类的功能, 但不能改变父类原有的功能
+    - 即: 子类继承父类时, 除添加新的方法完成新的功能外, 尽量不要重写父类的方法
 
 > 依赖倒转原则 `Dependence Inversion Principle`
 
