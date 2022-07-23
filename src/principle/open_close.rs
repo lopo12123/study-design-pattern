@@ -46,21 +46,16 @@ impl Player {
 }
 // endregion
 
-/// expect output:
-/// using default skin.
-/// using my skin 1.
-fn main() {
+pub fn open_close_example() {
     let default_skin = DefaultSkin {};
     let skin1 = MySkin1 {};
 
     let mut player1 = Player::new(Box::new(default_skin));
 
-    {
-        player1.display();
-    }
+    player1.display();
+    // using default skin.
 
-    {
-        player1.set_skin(Box::new(skin1));
-        player1.display();
-    }
+    player1.set_skin(Box::new(skin1));
+    player1.display();
+    // using my skin 1.
 }

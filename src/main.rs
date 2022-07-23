@@ -1,3 +1,5 @@
+mod principle;
+
 fn main() {
-    println!("main fn here.");
+    principle::open_close_example();
 }

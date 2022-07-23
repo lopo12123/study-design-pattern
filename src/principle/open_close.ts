@@ -29,13 +29,29 @@ class MySkin1 extends AbstractSkin {
  * @description 人物
  */
 class Player {
-    private skin: AbstractSkin;
+    private skin: AbstractSkin | null = null;
 
     public setSkin(skin: AbstractSkin) {
         this.skin = skin
     }
 
     public display() {
-        this.skin.display()
+        if (!this.skin) console.log('no skin yet!')
+        else this.skin.display()
     }
 }
+
+const defaultSkin = new DefaultSkin()
+const mySkin1 = new MySkin1()
+const player = new Player()
+
+player.display()
+// no skin yet!
+
+player.setSkin(defaultSkin)
+player.display()
+// using default skin.
+
+player.setSkin(mySkin1)
+player.display()
+// using my skin 1.
