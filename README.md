@@ -57,11 +57,20 @@
     - 通俗理解: 子类可以扩展父类的功能, 但不能改变父类原有的功能
     - 即: 子类继承父类时, 除添加新的方法完成新的功能外, 尽量不要重写父类的方法
 - 实例([typescript](./src/principle/liskov_substitution.ts), [rust](./src/principle/liskov_substitution.rs))
-  - 正方形继承长方形却无法适用 `resize` 方法, 违反里氏代换原则
+    - 正方形继承长方形却无法适用 `resize` 方法, 违反里氏代换原则
 
 > 依赖倒转原则 `Dependence Inversion Principle`
 
+- 高层模块不应该依赖低层模块, 两者都应该依赖其抽象
+- 抽象不应该依赖细节, 细节应该依赖抽象
+- 即: 对抽象进行编程, 不要对实现进行编程, 以降低客户与实现模块之间的耦合
+- 实例([typescript](./src/principle/dependence_inversion.ts))
+    - 组装电脑的部件需要依赖于抽象而不是具体(此处指具体品牌)
+
 > 接口隔离原则 `Interface Segregation Principle`
+
+- 客户端不应该被迫依赖于它不使用的方法: 一个类对另一个类的依赖应该建立在最小的接口上
+- 实例([typescript](./src/principle/interface_segregation.ts))
 
 > 迪米特法则
 
